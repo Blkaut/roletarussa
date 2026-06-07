@@ -38,7 +38,7 @@ app.get("/roleta", (req, res) => {
 
     resposta =
       `😵💥🔫 ${user} puxou o gatilho e morreu na ${camara} bala, que azar! 👀` +
-      `${user} já morreu ${vezesStr} jogando roleta russa. 🤭` +
+      `${user} já morreu ${vezesStr}. 🤭` +
       `O revólver foi recarregado!`;
 
     resetarRevolver();
