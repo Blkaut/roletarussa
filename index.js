@@ -37,10 +37,9 @@ app.get("/roleta", (req, res) => {
     const vezesStr = totalMortes === 1 ? "1 vez" : `${totalMortes} vezes`;
 
     resposta =
-      `💥 BANG! ${user} puxou o gatilho na câmara (${camara}/6)... ` +
-      `e a bala era essa! ☠️ ${user} morreu! ` +
-      `Já morreu ${vezesStr} jogando roleta russa. ` +
-      `O revólver foi recarregado — boa sorte pra próxima rodada!`;
+      `😵💥🔫 ${user} puxou o gatilho e morreu na ${camara} bala, que azar! 👀` +
+      `${user} já morreu ${vezesStr} jogando roleta russa. 🤭` +
+      `O revólver foi recarregado!`;
 
     resetarRevolver();
   } else {
@@ -51,14 +50,14 @@ app.get("/roleta", (req, res) => {
     if (balaAtual > 6) {
       // chegou ao fim sem ninguém morrer — reseta
       resposta =
-        `😮‍💨 ${user} disparou a câmara (${camara}/6) e se safou! ` +
+        `😮‍💨❌🔫 ${user} puxou o gatilho e se safou! ` +
         `Ufa... todas as 6 câmaras foram disparadas sem mortes. ` +
         `O revólver foi recarregado!`;
       resetarRevolver();
     } else {
       resposta =
-        `😮‍💨 ${user} disparou a câmara (${camara}/6) e se safou! ` +
-        `A próxima câmara é a ${proxima}/6... quem vai ousar?`;
+        `😮‍💨❌🔫 ${user} puxou o gatilho e se safou! ` +
+        `A próxima câmara é a ${proxima}/6... quem vai tentar a sorte? 🤭`;
     }
   }
 
